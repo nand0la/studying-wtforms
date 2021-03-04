@@ -1,0 +1,39 @@
+{% extends "base.jinja2" %}
+
+{% block title %} Register  {% endblock title %}
+
+{% block form_type %} REGISTER {% endblock form_type %}
+{% block form_desc %} se registre em nossa aplicação {% endblock form_desc %}
+
+{% block form %}
+    <form action="/register" method="POST">
+        <div class="fields">
+            {{form.name.label}}
+            {{form.name}} 
+        </div>
+
+        <div class="fields">
+            {{form.email.label}}
+            {{form.email}} 
+        </div>
+
+        <div class="fields">
+            {{form.password.label}}
+            {{form.password}} 
+        </div>
+
+        <div class="fields">
+            {{form.comfirm_password.label}}
+            {{form.comfirm_password}} 
+        </div>
+
+        <div class="fields">
+            {{form.email_accept}} 
+            {{form.email_accept.label}}
+        </div>
+
+        <div class="fields">
+            {{form.btn_submit}} 
+        </div>
+    </form>
+{% endblock form %}

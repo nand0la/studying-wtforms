@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Name Aplication | {% block title %} {% endblock title %} </title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #5352ed;
+            font-family: 'Red Hat Display', sans-serif;
+            color: #2f3542;
+            overflow-x: hidden;
+        }
+
+        #box-form {
+            background: #f1f2f6;
+            padding: 20px;
+            width: 350px;
+            margin: 50px auto;
+            border-radius: 3px;
+            box-shadow: 0px 0px 32px -16px rgba(54,54,54,1);
+        }
+
+        .title {
+            font-size: 2.4em;
+        }
+
+        .sub_title {
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        .fields {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .fields > input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            border-radius: 3px;
+        }
+
+        .fields > input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            border-radius: 3px;
+        }
+
+        .fields > input[type="submit"] {
+            width: 100%;
+            border: 0;
+            margin-left: auto;
+            display: block;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 1em;
+            border-radius: 3px;
+            color: #f1f2f6;
+            background: #5352ed;
+        }        
+
+        .fields > input[type="submit"]:hover {
+            background: #3742fa;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="box-form">
+            <center>
+                <h1 class="title"> {% block form_type %} {% endblock form_type %} </h1>
+                <p class="sub_title"> {% block form_desc %} {% endblock form_desc %} </p>
+            </center>
+
+            {% block form %} 
+                
+            {% endblock form %}
+        </div>
+    </main>
+</body>
+</html>

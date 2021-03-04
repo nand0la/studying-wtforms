@@ -1,0 +1,29 @@
+{% extends "base.jinja2" %}
+
+{% block title %} Login {% endblock title %}
+
+{% block form_type %} LOGIN {% endblock form_type %}
+{% block form_desc %} faça login na nossa aplicação {% endblock form_desc %}
+
+{% block form %}
+    <form method="POST" action="/login">
+        <div class="fields">
+            {{form.name.label}}
+            {{form.name}} 
+        </div>
+
+        <div class="fields">
+            {{form.password.label}}
+            {{form.password}} 
+        </div>
+
+        <div class="fields">
+            {{form.stay_connected}} 
+            {{form.stay_connected.label}}
+        </div>
+
+        <div class="fields">
+            {{form.btn_submit}} 
+        </div>
+    </form>
+{% endblock form %}
